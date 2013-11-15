@@ -13,7 +13,7 @@ using namespace std;
 
 int main(void){
 	cout << "This is just an empty shell!" << endl;
-	cout << "Trial #5 of upload!" << endl;
+	cout << "Collaborator-2 Synced!" << endl;
 
 	return 0;
 }
