@@ -7,10 +7,18 @@
 //============================================================================
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <math.h>
+#include <cstdlib>
+#include <iosfwd>
+#include "Test.hpp"
+#include "Patient.hpp"
 using namespace std;
 
 int main() {
 	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	cout << "Tes t!2" << endl;
+	cout << "Test!2" << endl;
 	return 0;
 }
