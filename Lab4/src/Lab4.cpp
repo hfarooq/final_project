@@ -13,12 +13,30 @@
 #include <math.h>
 #include <cstdlib>
 #include <iosfwd>
-#include "Test.hpp"
-#include "Patient.hpp"
+#include "Physical.hpp"
 using namespace std;
 
 int main() {
-	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
-	cout << "Test!2" << endl;
+
+	test temp;
+	vital temp2;
+	pressure temp3;
+	urine temp4;
+	temp.getinfo();
+	temp2.getvital();
+	temp2.checkvital();
+	temp3.getpressure();
+	temp3.checkpressure();
+	temp4.geturine();
+	temp4.checkurine();
+
+
+
+
+
+
+
+
+
 	return 0;
 }
