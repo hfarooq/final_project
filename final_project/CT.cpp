@@ -43,29 +43,28 @@ void CT::schedule_CT(){
 	status = 1;
 }
 
-void CT::addAnnotation(){
+void CT::addAnnotationCT(){
 	string curr_date;
-
-	char new_note[500];
-
-	cout << "Please enter the current date: ";
-	cin >> curr_date;
+	string new_note;
+	string person;
 
 	cout << "Please enter your note: ";
-	cin>>new_note;
+	getline(cin, new_note);
 
-	cout << "The note was read!" << endl;
+	cout << "Please enter your name: ";
+	getline(cin, person);
 
-	cout << "Your note was " << new_note << endl;
+	cout << "Please enter the current date: ";
+	cin >> curr_date;					//ask how to read full line until enter instead of just until space
 
-
+	storeAnnotation("\n");
+	storeAnnotation("CT note:");
 	storeAnnotation(curr_date);
 	storeAnnotation("\n");
 	storeAnnotation(staff);
 	storeAnnotation(": ");
 	storeAnnotation(new_note);
 	storeAnnotation("\n");
-
 }
 
 void CT::openCT(char *filename){

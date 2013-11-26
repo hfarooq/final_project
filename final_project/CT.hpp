@@ -13,7 +13,6 @@
 #include <cstdlib>
 #include <string.h>
 
-
 #include "Images.hpp"
 
 using namespace std;
@@ -28,7 +27,7 @@ public:
 	CT();
 	void showStatus();
 	void schedule_CT();	//choose type of CT wanted
-	void addAnnotation();
+	void addAnnotationCT();
 	void openCT(char *filename);
 };
 

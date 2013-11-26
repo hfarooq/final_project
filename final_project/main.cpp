@@ -35,11 +35,19 @@ int main(void){
 	test.showStatus();
 	test.schedule_CT();
 	test.showStatus();
-	*/
+*/
 
-	test.addAnnotation();
+	test.addAnnotationCT();
 
+/*
+	string myString;
 
+	cout << "Type in your message now: " << endl;
+
+	getline(cin, myString);
+
+	cout << "You typed: " << myString << endl;
+*/
 	return 0;
 }
 
