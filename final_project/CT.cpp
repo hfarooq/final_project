@@ -39,6 +39,27 @@ void CT::schedule_CT(){
 	cin >> dateExam;
 
 	cout << "Exam has been booked!" << endl;
+}
+
+void CT::addAnnotation(){
+	string curr_date;
+	string new_note;
+
+	cout << "Please enter the current date: ";
+	cin >> curr_date;
+
+	cout << "Please enter your note: ";
+	cin>>new_note;
+
+	cout << "The note was read!";
+
+
+	storeAnnotation(curr_date);
+	storeAnnotation("\n");
+	storeAnnotation(staff);
+	storeAnnotation(": ");
+	storeAnnotation(new_note);
+	storeAnnotation("\n");
 
 }
 

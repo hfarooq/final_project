@@ -30,10 +30,9 @@ int main(void){
 	system(result);
 */
 
-	Images test;
-	test.setAdministrators();
+	CT test;
 
-	test.displayFileInfo();
+	test.addAnnotation();
 
 
 

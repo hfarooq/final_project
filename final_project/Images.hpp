@@ -27,7 +27,7 @@ public:
 	Images(string doctor, string person, string calender);
 	void setAdministrators();
 	void displayFileInfo();
-	void addAnnotation(string append);
+	void storeAnnotation(string append);
 	void openFile();
 	void closeFile();
 };

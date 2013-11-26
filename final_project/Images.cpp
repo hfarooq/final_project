@@ -53,7 +53,7 @@ void Images::closeFile(){
 			notes.close();
 }
 
-void Images::addAnnotation(string append){
+void Images::storeAnnotation(string append){
 	openFile();
 	notes << append;
 	closeFile();
