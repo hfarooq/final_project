@@ -5,26 +5,63 @@
  *      Author: Ashkan
  */
 
+#include <string>
+#include <iostream>
+#include <stdlib.h>
+#include <fstream>
+#include <sstream>
+#include <string.h>
+#include <iosfwd>
 
 #include <iostream>
 #include <fstream>
-#include <string>
-#include <sstream>
-#include <math.h>
-#include <cstdlib>
-#include <iosfwd>
 #include "Physical.hpp"
 using namespace std;
 
 test::test(){
 	administrator = "Empty";
 	annotation = "Empty";
-	date= 0;
-	time= 0;
-
+	date = 0;
+	time = 0;
 
 
 }
+
+void test::openPhysicalFile()
+{
+
+	if (! PhysicalFile.is_open() )
+	{
+
+		PhysicalFile.open("PhysicalFile.txt", ios::out | ios::app);
+	}
+}
+
+void test::closePhysicalFile()
+{
+	//initialize the patient file if it isn't already opened
+	if (PhysicalFile.is_open() )
+	{
+		PhysicalFile.close();
+	}
+}
+void test::addAnnotation(string name, string strAnnotation)
+{
+	char timestring[100];
+	char str[1024];
+	cout << "Please enter the date of test(yymmdd):" << endl;
+	cin >> date;
+	cout << "Please enter the time (hhmm):" << endl;
+	cin >> time;
+
+
+	//format the output
+	sprintf(str, "\nAnnotation: [%15s] @ [%9s] Note: [%s]", timestring, name.c_str(), strAnnotation.c_str());
+
+	//write the output to the patient file
+	appendToPhysicalFile(str);
+}
+
 
 void test::getinfo(){
 	int choice;
@@ -170,5 +207,36 @@ void urine::checkurine(){
 	else if (protein != 0){
 		cout <<"Protein was detected in the sample. Abnormal!"<<endl;
 	}
+
+
+}
+void test :: appendToPhysicalFile()
+{
+
+	openPhysicalFile();
+	PhysicalFile << mystr;
+	closePhysicalFile();
+
+}
+
+
+vital::vital(){
+
+	temperature = 0;
+	respiration= 0;
+	pulse = 0;
+
+}
+
+pressure::pressure(){
+	sys=0;
+	dias=0;
+
+}
+
+urine::urine(){
+	ph = 0;
+	sugar = 0;
+	protein = 0;
 
 }
