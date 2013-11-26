@@ -31,9 +31,13 @@ int main(void){
 */
 
 	CT test;
+/*
+	test.showStatus();
+	test.schedule_CT();
+	test.showStatus();
+	*/
 
 	test.addAnnotation();
-
 
 
 	return 0;

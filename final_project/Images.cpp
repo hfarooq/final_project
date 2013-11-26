@@ -30,7 +30,7 @@ void Images::setAdministrators(){
 	cout << "Please enter staff name: ";
 	cin >> staff;
 
-	cout << "Please enter patient name: ";
+	cout << "Please enter the last name of the patient: ";
 	cin >> patient_lastname;
 
 	cout << "Please enter today's date: ";
@@ -39,7 +39,7 @@ void Images::setAdministrators(){
 
 void Images::displayFileInfo(){
 	cout << "Staff name is " << staff << endl;
-	cout << "Patient name is " << patient_lastname << endl;
+	cout << "Last name of patient is " << patient_lastname << endl;
 	cout << "File created on date " << date << endl;
 }
 
@@ -58,3 +58,11 @@ void Images::storeAnnotation(string append){
 	notes << append;
 	closeFile();
 }
+
+void Images::storeAnnotation(char *append){
+	openFile();
+	notes << append;
+	closeFile();
+}
+
+

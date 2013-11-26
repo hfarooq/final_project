@@ -16,11 +16,11 @@ CT::CT(){
 
 void CT::showStatus(){
 	if (status == 1){
-		cout << type_CT << " booked for patient " << patient_lastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date;
+		cout << type_CT << " booked for patient " << patient_lastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
 	}
-	else
-		cout << "No CT has yet been booked!";
-
+	else{
+		cout << "No CT has yet been booked!" << endl;
+	}
 }
 
 void CT::schedule_CT(){
@@ -28,7 +28,7 @@ void CT::schedule_CT(){
 
 	setAdministrators();
 
-	cout << "Enter the type of CT requested:\n1)CT\2)CTA\nEnter selection: ";
+	cout << "Enter the type of CT requested:\n1)CT\n2)CTA\nEnter selection: ";
 	cin >> choice;
 	if (choice == 1)
 		type_CT = "CT";
@@ -39,11 +39,14 @@ void CT::schedule_CT(){
 	cin >> dateExam;
 
 	cout << "Exam has been booked!" << endl;
+
+	status = 1;
 }
 
 void CT::addAnnotation(){
 	string curr_date;
-	string new_note;
+
+	char new_note[500];
 
 	cout << "Please enter the current date: ";
 	cin >> curr_date;
@@ -51,7 +54,9 @@ void CT::addAnnotation(){
 	cout << "Please enter your note: ";
 	cin>>new_note;
 
-	cout << "The note was read!";
+	cout << "The note was read!" << endl;
+
+	cout << "Your note was " << new_note << endl;
 
 
 	storeAnnotation(curr_date);

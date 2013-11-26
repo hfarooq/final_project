@@ -28,6 +28,7 @@ public:
 	void setAdministrators();
 	void displayFileInfo();
 	void storeAnnotation(string append);
+	void storeAnnotation(char* append);
 	void openFile();
 	void closeFile();
 };
