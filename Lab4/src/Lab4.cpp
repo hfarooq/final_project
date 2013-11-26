@@ -46,9 +46,9 @@ using namespace std;
 				temp2.getinfo();
 				temp2.getvital();
 				temp2.checkvital();
-				temp2.openPatientFile();
+
 				temp2.appendTestToPhysicalFile();
-				temp2.closePatientFile();
+
 
 
 				break;

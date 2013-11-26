@@ -50,7 +50,7 @@ void test::addAnnotation(string name, string annotation)
 	cin >> date;
 	cout << "Please enter the time (hhmm):" << endl;
 	cin >> time;
-	sprintf(mystring, "\nAnnotation: [%15s] Note: [%s]", name.c_str(), annotation.c_str());
+	sprintf(mystring, "\nAnnotation: [%15s] Note: [%s] Date: [%0d] Time: [%0d]", name.c_str(), annotation.c_str(), date, time);
 	appendToPatientFile(mystring);
 }
 
@@ -256,10 +256,11 @@ void vital::appendTestToPhysicalFile()
 	char mystring[1000];
 	sprintf(mystring, "\n\n***Vital sign summary:***      \n" \
 					 "Test Administrator       = [%s]\n" \
-					 "Temperature = %0lf\n" \
+					 "The date and time          =%0d, %0d\n"
+					 "Temperature = %0f\n" \
 					 "Respiration rate:  = %0d\n"
 					 "Pulse:    = %0d\n",
-					 administrator.c_str(), temperature, respiration, pulse);
+					 administrator.c_str(),date,time, temperature, respiration, pulse);
 
 
 		appendToPatientFile(mystring);
@@ -272,10 +273,11 @@ void urine::appendTestToPhysicalFile()
 
 	sprintf(mystring, "\n\n***Urine test summary:***  \n" \
 				 "Test Administrator       = [%s]\n" \
+				 "The date and time          =%0d, %0d\n"
 				 "pH = %0lf\n" \
 				 "Protein   = %0lf\n"
 				 "Sugar    = %0lf\n",
-				administrator.c_str(), ph, protein, sugar);
+				administrator.c_str(),date,time, ph, protein, sugar);
 
 	appendToPatientFile(mystring);
 
@@ -289,9 +291,10 @@ void pressure::appendTestToPhysicalFile()
 
 	sprintf(mystring, "\n\n***Blood pressure summary:***\n" \
 				 "Test Administrator       = [%s]\n" \
+				 "The date and time          =%0d, %0d\n"
 				 "Diastolic pressure = %0lf\n" \
 				 "Systolic pressure   = %0lf\n",
-				administrator.c_str(), dias, sys);
+				administrator.c_str(),date,time, dias, sys);
 
 	appendToPatientFile(mystring);
 }
