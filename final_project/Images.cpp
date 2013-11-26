@@ -12,9 +12,17 @@ using namespace std;
 
 Images::Images(){
 
+	staff = "UNAVAILABLE";
+	patient_name = "UNAVAILABLE";
+	date = "UNAVAILABLE";
+
 }
 
 
-Images::Images(string doctor, string person, string schedule){
+Images::Images(string doctor, string person, string calender){
+
+	staff = doctor;
+	patient_name = person;
+	date = calender;
 
 }

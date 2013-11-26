@@ -21,7 +21,7 @@ private:
 
 public:
 	Images();
-	Images(string doctor, string person, string schedule);
+	Images(string doctor, string person, string calender);
 };
 
 

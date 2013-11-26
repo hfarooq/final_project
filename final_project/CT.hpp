@@ -19,7 +19,7 @@ private:
 
 public:
 	CT();
-	CT(string doctor, string person, string schedule);
+	CT(string doctor, string person, string calender);
 };
 
 

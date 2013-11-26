@@ -12,6 +12,7 @@ CT::CT(){
 
 }
 
-CT::CT(string doctor, string person, string schedule){
+CT::CT(string doctor, string person, string calender)
+: Images(doctor, person, calender){
 
 }
