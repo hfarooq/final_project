@@ -9,19 +9,27 @@
 #define IMAGES_HPP_
 
 #include <iostream>
-#include <stdio.h>
+#include <stdlib.h>
+#include <fstream>
 
 using namespace std;
 
+
 class Images{
-private:
+protected:
 	string staff;
-	string patient_name;
+	string patient_lastname;
 	string date;
+	ofstream notes;
 
 public:
 	Images();
 	Images(string doctor, string person, string calender);
+	void setAdministrators();
+	void displayFileInfo();
+	void addAnnotation(string append);
+	void openFile();
+	void closeFile();
 };
 
 
