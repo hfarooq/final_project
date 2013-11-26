@@ -12,19 +12,21 @@ using namespace std;
 
 class test{
 protected:
-	string administrator, annotation;
-
+	string administrator;
 	int	date, time;
-	ofstream	PhysicalFile;
+	ofstream	PatientFile;
 public:
-	void getinfo();
-	void addAnnotation(string name, string strAnnotation);
-	void appendTestPhysicalToFile();
-	void openPhysicalFile();
-	void closePhysicalFile();
 	string getAdministrator()  { return administrator;   }
-
 	test();
+	void getinfo();
+	void addAnnotation(string name, string annotation);
+	void appendToPatientFile(string mystring);
+	void openPatientFile();
+	void closePatientFile();
+
+
+
+
 
 };
 
@@ -36,7 +38,7 @@ public:
 	vital();
 	void getvital();
 	void checkvital();
-	void appendTestPhysicalToFile();
+	void appendTestToPhysicalFile();
 
 
 };
@@ -48,7 +50,7 @@ public:
 	pressure();
 	void getpressure();
 	void checkpressure();
-	void appendTestPhysicalToFile();
+	void appendTestToPhysicalFile();
 
 };
 
@@ -59,7 +61,7 @@ public:
 	urine();
 	void geturine();
 	void checkurine();
-	void appendTestPhysicalToFile();
+	void appendTestToPhysicalFile();
 
 };
 

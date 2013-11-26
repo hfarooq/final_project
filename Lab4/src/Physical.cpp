@@ -12,7 +12,6 @@
 #include <sstream>
 #include <string.h>
 #include <iosfwd>
-
 #include <iostream>
 #include <fstream>
 #include "Physical.hpp"
@@ -20,46 +19,39 @@ using namespace std;
 
 test::test(){
 	administrator = "Empty";
-	annotation = "Empty";
 	date = 0;
 	time = 0;
+}
+vital::vital(){
 
+	temperature = 0;
+	respiration= 0;
+	pulse = 0;
 
 }
 
-void test::openPhysicalFile()
-{
+pressure::pressure(){
+	sys=0;
+	dias=0;
 
-	if (! PhysicalFile.is_open() )
-	{
-
-		PhysicalFile.open("PhysicalFile.txt", ios::out | ios::app);
-	}
 }
 
-void test::closePhysicalFile()
-{
-	//initialize the patient file if it isn't already opened
-	if (PhysicalFile.is_open() )
-	{
-		PhysicalFile.close();
-	}
+urine::urine(){
+	ph = 0;
+	sugar = 0;
+	protein = 0;
 }
-void test::addAnnotation(string name, string strAnnotation)
+
+void test::addAnnotation(string name, string annotation)
 {
-	char timestring[100];
-	char str[1024];
+
+	char mystring[1000];
 	cout << "Please enter the date of test(yymmdd):" << endl;
 	cin >> date;
 	cout << "Please enter the time (hhmm):" << endl;
 	cin >> time;
-
-
-	//format the output
-	sprintf(str, "\nAnnotation: [%15s] @ [%9s] Note: [%s]", timestring, name.c_str(), strAnnotation.c_str());
-
-	//write the output to the patient file
-	appendToPhysicalFile(str);
+	sprintf(mystring, "\nAnnotation: [%15s] Note: [%s]", name.c_str(), annotation.c_str());
+	appendToPatientFile(mystring);
 }
 
 
@@ -85,9 +77,6 @@ void test::getinfo(){
 	cin >> date;
 	cout << "Please enter the time (hhmm):" << endl;
 	cin >> time;
-
-
-
 }
 
 void vital::getvital(){
@@ -127,13 +116,13 @@ void vital::checkvital(){
 
 	// Check pulse rate
 
-	if (respiration<=60){
+	if (pulse<=60){
 		cout <<"The pulse rate is lower than the normal range!"<<endl;
 	}
-	else if (60<respiration && respiration<100){
+	else if (60<pulse && pulse<100){
 		cout <<"The pulse rate is within the normal range!"<<endl;
 	}
-	else if (respiration>=100){
+	else if (pulse>=100){
 		cout <<"The pulse rate is higher than the normal range!"<<endl;
 	}
 
@@ -210,33 +199,76 @@ void urine::checkurine(){
 
 
 }
-void test :: appendToPhysicalFile()
+
+void vital::appendTestToPhysicalFile()
 {
-
-	openPhysicalFile();
-	PhysicalFile << mystr;
-	closePhysicalFile();
-
-}
+	char mystring[1000]; // contains our long string for formatting the output
 
 
-vital::vital(){
+	//format the time into a string
 
-	temperature = 0;
-	respiration= 0;
-	pulse = 0;
 
-}
+	sprintf(mystring, "\n\nVital sign summary:      \n" \
+					 "Test Administrator       = [%s]\n" \
+					 "       Temperature = %0lf\n" \
+					 "       Respiration rate:  = %0d\n"
+					 "       Pulse:    = %0d\n",
+					 administrator.c_str(), temperature, respiration, pulse);
 
-pressure::pressure(){
-	sys=0;
-	dias=0;
+
+		appendToPatientFile(mystring);
 
 }
 
-urine::urine(){
-	ph = 0;
-	sugar = 0;
-	protein = 0;
+void urine::appendTestToPhysicalFile()
+{
+	char mystring[1000];
 
+	sprintf(mystring, "\n\n Urine test summary:  \n" \
+				 "Test Administrator       = [%s]\n" \
+				 "       pH = %0lf\n" \
+				 "       Protein   = %0lf\n"
+				 "      Sugar    = %0lf\n",
+				administrator.c_str(), ph, protein, sugar);
+
+	appendToPatientFile(mystring);
+
+
+}
+
+void pressure::appendTestToPhysicalFile()
+{
+	char mystring[1000];
+
+
+	sprintf(mystring, "\n\n\n" \
+				 "Test Administrator       = [%s]\n" \
+				 "       Diastolic pressure = %0lf\n" \
+				 "       Systolic pressure   = %0lf\n",
+				administrator.c_str(), dias, sys);
+
+	appendToPatientFile(mystring);
+}
+
+void test::appendToPatientFile(string mystring){
+	openPatientFile();
+	PatientFile << mystring;
+	closePatientFile();
+}
+
+void test::openPatientFile()
+{
+	if (! PatientFile.is_open() )
+	{
+		PatientFile.open("PhysicalFile.txt", ios::out | ios::app);
+	}
+}
+
+void test::closePatientFile()
+{
+	//initialize the patient file if it isn't already opened
+	if (PatientFile.is_open() )
+	{
+		PatientFile.close();
+	}
 }

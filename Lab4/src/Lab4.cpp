@@ -43,42 +43,38 @@ using namespace std;
 			switch(choice){
 
 			case 1:
-				temp2.getvital(); // get the information about the
+				temp.getinfo();
+				temp2.getvital();
 				temp2.checkvital();
-				temp2.appendTestPhysicalToFile();
+				temp2.openPatientFile();
+				temp2.appendTestToPhysicalFile();
+				temp2.closePatientFile();
+
 
 				break;
 
 
 			case 2:
+				temp3.getinfo();
 				temp3.getpressure();
 				temp3.checkpressure();
-				temp3.appendTestPhysicalToFile();
-
-
-
+				temp3.appendTestToPhysicalFile();
 				break;
 
 
 			case 3:
+				temp4.getinfo();
 				temp4.geturine();
 				temp4.checkurine();
-
-
-				temp4.appendTestPhysicalToFile();
+				temp4.appendTestToPhysicalFile();
 				break;
 
 			case 4:
-
 				cin.ignore();
-
 				cout << "Enter your name or ID  :";
 				getline(cin, name, '\n');
-
 				cout << "Enter your annotation  :";
 				getline(cin, annotation, '\n');
-
-				//use the base class to add the annotation to the patient file
 				temp.addAnnotation(name, annotation);
 
 				break;
