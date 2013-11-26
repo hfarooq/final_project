@@ -18,6 +18,13 @@
 using namespace std;
 
 class MR : public Images{
+private:
+
+
+
+public:
+
+
 
 };
 

@@ -18,6 +18,12 @@
 using namespace std;
 
 class Ultrasound : public Images{
+private:
+
+
+public:
+
+
 
 };
 

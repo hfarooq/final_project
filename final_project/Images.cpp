@@ -13,7 +13,7 @@ using namespace std;
 Images::Images(){
 
 	staff = "UNAVAILABLE";
-	patient_lastname = "UNAVAILABLE";
+	patient_lastname = "JOHN_DOE";
 	date = "UNAVAILABLE";
 
 }
