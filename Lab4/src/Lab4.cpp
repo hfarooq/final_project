@@ -43,7 +43,7 @@ using namespace std;
 			switch(choice){
 
 			case 1:
-				temp.getinfo();
+				temp2.getinfo();
 				temp2.getvital();
 				temp2.checkvital();
 				temp2.openPatientFile();
