@@ -15,12 +15,13 @@ using namespace std;
 
 class Images{
 private:
+	string staff;
 	string patient_name;
 	string date;
 
 public:
 	Images();
-
+	Images(string doctor, string person, string schedule);
 };
 
 
