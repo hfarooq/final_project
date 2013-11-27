@@ -35,3 +35,11 @@ UNAVAILABLE:
 UNAVAILABLE: This is my note
 26th
 UNAVAILABLE: The patient presented needs a follow up CTA
+
+Ultrasound note
+11/26/13
+UNAVAILABLE: This is testing the Ultrasound
+
+Ultrasound note
+11/27/13
+Reaper, Grimm: Testing ultrasound yet again

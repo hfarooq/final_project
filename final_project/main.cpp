@@ -12,6 +12,8 @@
 #include <string.h>
 #include "Images.hpp"
 #include "CT.hpp"
+#include "Ultrasound.hpp"
+#include "MR.hpp"
 
 using namespace std;
 
@@ -30,14 +32,14 @@ int main(void){
 	system(result);
 */
 
-	CT test;
+	Ultrasound test;
 /*
 	test.showStatus();
 	test.schedule_CT();
 	test.showStatus();
 */
 
-	test.addAnnotationCT();
+	test.addAnnotationUS();
 
 /*
 	string myString;

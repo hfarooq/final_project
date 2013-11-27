@@ -55,13 +55,13 @@ void CT::addAnnotationCT(){
 	getline(cin, person);
 
 	cout << "Please enter the current date: ";
-	cin >> curr_date;					//ask how to read full line until enter instead of just until space
+	cin >> curr_date;
 
 	storeAnnotation("\n");
-	storeAnnotation("CT note:");
+	storeAnnotation("CT note\n");
 	storeAnnotation(curr_date);
 	storeAnnotation("\n");
-	storeAnnotation(staff);
+	storeAnnotation(person);
 	storeAnnotation(": ");
 	storeAnnotation(new_note);
 	storeAnnotation("\n");

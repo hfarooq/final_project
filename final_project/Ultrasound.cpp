@@ -8,3 +8,40 @@
 
 #include "Ultrasound.hpp"
 
+
+Ultrasound::Ultrasound(){
+	saved_type = ".jpg";
+}
+
+void Ultrasound::addAnnotationUS(){
+	string curr_date;
+	string new_note;
+	string person;
+
+	cout << "Please enter your note: ";
+	getline(cin, new_note);
+
+	cout << "Please enter your name: ";
+	getline(cin, person);
+
+	cout << "Please enter the current date: ";
+	cin >> curr_date;					//ask how to read full line until enter instead of just until space
+
+	storeAnnotation("\n");
+	storeAnnotation("Ultrasound note\n");
+	storeAnnotation(curr_date);
+	storeAnnotation("\n");
+	storeAnnotation(person);
+	storeAnnotation(": ");
+	storeAnnotation(new_note);
+	storeAnnotation("\n");
+}
+
+void Ultrasound::openUS(char *filename){
+	char opening[100];
+
+	strcpy(opening, filename);
+	strcat(opening, saved_type);
+
+	system(opening);
+}

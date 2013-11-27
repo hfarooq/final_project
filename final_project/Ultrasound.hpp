@@ -19,11 +19,12 @@ using namespace std;
 
 class Ultrasound : public Images{
 private:
-
+	char *saved_type;
 
 public:
-
-
+	Ultrasound();
+	void addAnnotationUS();
+	void openUS(char *filename);
 
 };
 

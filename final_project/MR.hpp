@@ -19,11 +19,12 @@ using namespace std;
 
 class MR : public Images{
 private:
-
-
+	char *saved_type;
 
 public:
-
+	MR();
+	void addAnnotationMR();
+	void openMR(char *filename);
 
 
 };
