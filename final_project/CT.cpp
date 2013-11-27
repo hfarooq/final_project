@@ -67,6 +67,19 @@ void CT::addAnnotationCT(){
 	storeAnnotation("\n");
 }
 
+void CT::openCT(){
+	char opening[100];
+	char filename[75];
+
+	cout << "Please enter filename of the image you wish to view: " << endl;
+	cin >> filename;
+
+	strcpy(opening, filename);
+	strcat(opening, saved_type);
+
+	system(opening);
+}
+
 void CT::openCT(char *filename){
 	char opening[100];
 

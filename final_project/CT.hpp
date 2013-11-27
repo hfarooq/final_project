@@ -19,15 +19,16 @@ using namespace std;
 
 class CT : public Images{
 private:
-	string type_CT;
-	char *saved_type;
 	int status;			//if status equals 1, then CT has been booked
+	char *saved_type;
 	string dateExam;
+	string type_CT;
 public:
 	CT();
 	void showStatus();
 	void schedule_CT();	//choose type of CT wanted
 	void addAnnotationCT();
+	void openCT();
 	void openCT(char *filename);
 };
 

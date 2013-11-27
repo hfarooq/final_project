@@ -32,24 +32,16 @@ int main(void){
 	system(result);
 */
 
-	Ultrasound test;
+	CT test;
+	cout << "Filename of image currently stored in system is \"formula-1-race\"" << endl;
+	test.openCT();
 /*
 	test.showStatus();
 	test.schedule_CT();
 	test.showStatus();
 */
 
-	test.addAnnotationUS();
 
-/*
-	string myString;
-
-	cout << "Type in your message now: " << endl;
-
-	getline(cin, myString);
-
-	cout << "You typed: " << myString << endl;
-*/
 	return 0;
 }
 

@@ -19,11 +19,20 @@ using namespace std;
 
 class MR : public Images{
 private:
-	char *saved_type;
+	double imagingFrequency;			//in MHz
+	double magneticFieldStrength;		//in Tesla
+	double spacingBetweenSlices;		//in mm
+	string MRAcquisitionType;			//2D=frequency X phase or 3D = frequency X phase X phase
+	string dateExam;					//used to schedule the exam
+	char *saved_type;					//.jpg
+	int status;							//shows whether MR scheduled or not
 
 public:
 	MR();
+	void showStatus();
+	void schedule_MR();
 	void addAnnotationMR();
+	void openMR();
 	void openMR(char *filename);
 
 

@@ -24,6 +24,7 @@ private:
 public:
 	Ultrasound();
 	void addAnnotationUS();
+	void openUS();
 	void openUS(char *filename);
 
 };

@@ -25,7 +25,7 @@ void Ultrasound::addAnnotationUS(){
 	getline(cin, person);
 
 	cout << "Please enter the current date: ";
-	cin >> curr_date;					//ask how to read full line until enter instead of just until space
+	cin >> curr_date;
 
 	storeAnnotation("\n");
 	storeAnnotation("Ultrasound note\n");
@@ -35,6 +35,19 @@ void Ultrasound::addAnnotationUS(){
 	storeAnnotation(": ");
 	storeAnnotation(new_note);
 	storeAnnotation("\n");
+}
+
+void Ultrasound::openUS(){
+	char opening[100];
+	char filename[75];
+
+	cout << "Please enter filename of the image you wish to view: " << endl;
+	cin >> filename;
+
+	strcpy(opening, filename);
+	strcat(opening, saved_type);
+
+	system(opening);
 }
 
 void Ultrasound::openUS(char *filename){
