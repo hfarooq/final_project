@@ -27,6 +27,7 @@ void CT::showStatusContents(){
 		cout << "Size of focal point is: " << focalPoint << " mm." << endl;
 		cout << "Distance from source to detector is: " << distanceSourceDetector << " mm." << endl;
 		cout << "Distance from source to patient is: " << distanceSourcePatient << " mm." << endl;
+		cout << "Current in X-ray tube is : " << xRayTubeCurrent << " mA." << endl;
 	}
 	else{
 		cout << "No CT has yet been booked!" << endl;
