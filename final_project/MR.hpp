@@ -29,13 +29,11 @@ private:
 
 public:
 	MR();
-	void showStatus();
+	void showStatusContents();
 	void schedule_MR();
 	void addAnnotationMR();
 	void openMR();
 	void openMR(char *filename);
-
-
 };
 
 

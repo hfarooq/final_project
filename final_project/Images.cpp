@@ -13,7 +13,7 @@ using namespace std;
 Images::Images(){
 
 	staff = "UNAVAILABLE";
-	patient_lastname = "JOHN_DOE";
+	patientLastname = "JOHN_DOE";
 	date = "UNAVAILABLE";
 
 }
@@ -21,7 +21,7 @@ Images::Images(){
 Images::Images(string doctor, string person, string calender){
 
 	staff = doctor;
-	patient_lastname = person;
+	patientLastname = person;
 	date = calender;
 
 }
@@ -31,7 +31,7 @@ void Images::setAdministrators(){
 	cin >> staff;
 
 	cout << "Please enter the last name of the patient: ";
-	cin >> patient_lastname;
+	cin >> patientLastname;
 
 	cout << "Please enter today's date: ";
 	cin >> date;
@@ -39,7 +39,7 @@ void Images::setAdministrators(){
 
 void Images::displayFileInfo(){
 	cout << "Staff name is " << staff << endl;
-	cout << "Last name of patient is " << patient_lastname << endl;
+	cout << "Last name of patient is " << patientLastname << endl;
 	cout << "File created on date " << date << endl;
 }
 

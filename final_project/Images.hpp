@@ -18,7 +18,7 @@ using namespace std;
 class Images{
 protected:
 	string staff;
-	string patient_lastname;
+	string patientLastname;
 	string date;
 	ofstream notes;
 

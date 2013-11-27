@@ -9,14 +9,24 @@
 #include "CT.hpp"
 
 CT::CT(){
-	type_CT = "NA";
+	exposureTime = 30;
+	focalPoint = 5;
+	distanceSourceDetector = 15;
+	distanceSourcePatient = 12;
+	xRayTubeCurrent = 10;
+	typeCT = "CT";
 	saved_type = ".jpg";
 	status = 0;
 }
 
-void CT::showStatus(){
+void CT::showStatusContents(){
 	if (status == 1){
-		cout << type_CT << " booked for patient " << patient_lastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
+		cout << typeCT << " booked for patient " << patientLastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
+		cout << "Details of the " << typeCT << " are as follows:" << endl;
+		cout << "Exposure time is: " << exposureTime << " ms." << endl;
+		cout << "Size of focal point is: " << focalPoint << " mm." << endl;
+		cout << "Distance from source to detector is: " << distanceSourceDetector << " mm." << endl;
+		cout << "Distance from source to patient is: " << distanceSourcePatient << " mm." << endl;
 	}
 	else{
 		cout << "No CT has yet been booked!" << endl;
@@ -31,9 +41,24 @@ void CT::schedule_CT(){
 	cout << "Enter the type of CT requested:\n1)CT\n2)CTA\nEnter selection: ";
 	cin >> choice;
 	if (choice == 1)
-		type_CT = "CT";
+		typeCT = "CT";
 	else if (choice == 2)
-		type_CT = "CTA";
+		typeCT = "CTA";
+
+	cout << "Enter the x-ray exposure time (in ms) of the patient: ";
+	cin >> exposureTime;
+
+	cout << "Enter the size (in mm) of the focal point: ";
+	cin >> focalPoint;
+
+	cout << "Enter the distance (in mm) from source to detector center: ";
+	cin >> distanceSourceDetector;
+
+	cout << "Enter the distance (in mm) from source to isocenter (center of field of view): ";
+	cin >> distanceSourcePatient;
+
+	cout << "Enter the current (in mA) of the current in the X-ray tube: ";
+	cin >> xRayTubeCurrent;
 
 	cout << "Enter requested date of CT: ";
 	cin >> dateExam;

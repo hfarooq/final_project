@@ -26,7 +26,6 @@ public:
 	void addAnnotationUS();
 	void openUS();
 	void openUS(char *filename);
-
 };
 
 
