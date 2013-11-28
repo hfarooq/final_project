@@ -19,20 +19,17 @@ using namespace std;
 
 class CT : public Images{
 private:
-	double exposureTime;	//in ms
-	double focalPoint;		//in mm
+	double exposureTime;			//in ms
+	double focalPoint;				//in mm
 	double distanceSourceDetector;	//in mm
 	double distanceSourcePatient;	//in mm
 	double xRayTubeCurrent;			//in mA
-	string typeCT;			//CT versus CTA
-	string dateExam;
-	char *saved_type;
-	int status;			//if status equals 1, then CT has been booked
+	string typeCT;					//CT versus CTA
 
 public:
 	CT();
 	void showStatusContents();
-	void schedule_CT();	//choose type of CT wanted
+	void schedule_CT();
 	void addAnnotationCT();
 	void openCT();
 	void openCT(char *filename);

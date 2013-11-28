@@ -9,6 +9,7 @@
 #include "CT.hpp"
 
 CT::CT(){
+	//Values given so that some default state can be present
 	exposureTime = 30;
 	focalPoint = 5;
 	distanceSourceDetector = 15;
@@ -21,7 +22,7 @@ CT::CT(){
 
 void CT::showStatusContents(){
 	if (status == 1){
-		cout << typeCT << " booked for patient " << patientLastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
+		cout << typeCT << " for patient " << patientLastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
 		cout << "Details of the " << typeCT << " are as follows:" << endl;
 		cout << "Exposure time is: " << exposureTime << " ms." << endl;
 		cout << "Size of focal point is: " << focalPoint << " mm." << endl;

@@ -19,10 +19,15 @@ using namespace std;
 
 class Ultrasound : public Images{
 private:
-	char *saved_type;
+	double depthScanField;		//depth in mm from the transducer face to the deepest point included in the displayed image
+	double focusDepth;			//depth from the transducer face in cm
+	double triggerTime;			//time in ms from start of R-wave to the beginning of data taking
+	double nominalInterval;		//time in ms of average R-R interval used for these data
 
 public:
 	Ultrasound();
+	void showStatusContents();
+	void schedule_US();
 	void addAnnotationUS();
 	void openUS();
 	void openUS(char *filename);

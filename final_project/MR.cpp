@@ -20,7 +20,7 @@ MR::MR(){
 
 void MR::showStatusContents(){
 	if (status==1){
-		cout << "MR booked for patient " << patientLastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
+		cout << "MR for patient " << patientLastname << " has been booked for the " << dateExam << " by Staff " << staff << " on the date of " << date << endl;
 		cout << "Details of the MR are as follows:" << endl;
 		cout << "Acquisition type is: " << MRAcquisitionType << "." << endl;
 		cout << "Imaging frequency is: " << imagingFrequency << " MHz." << endl;

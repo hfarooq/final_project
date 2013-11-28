@@ -14,13 +14,15 @@
 
 using namespace std;
 
-
 class Images{
 protected:
 	string staff;
 	string patientLastname;
 	string date;
 	ofstream notes;
+	string dateExam;
+	char *saved_type;
+	int status;
 
 public:
 	Images();

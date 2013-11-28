@@ -23,9 +23,6 @@ private:
 	double magneticFieldStrength;		//in Tesla
 	double spacingBetweenSlices;		//in mm
 	string MRAcquisitionType;			//2D=frequency X phase or 3D = frequency X phase X phase
-	string dateExam;					//used to schedule the exam
-	char *saved_type;					//.jpg
-	int status;							//shows whether MR scheduled or not
 
 public:
 	MR();
