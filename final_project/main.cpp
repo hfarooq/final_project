@@ -35,6 +35,7 @@ int main(void){
 	CT test;
 	cout << "Filename of image currently stored in system is \"formula-1-race\"" << endl;
 	test.openCT();
+
 /*
 	test.showStatus();
 	test.schedule_CT();
