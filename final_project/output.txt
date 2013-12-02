@@ -10,3 +10,7 @@ Awesomer: The patient is stable
 Ultrasound note
 03/12/13
 Cooler: The patient`s scan seems okay
+
+Magnetic Resonance note
+05/01/14
+Greater: The MR scan is scheduled and a followup may be required

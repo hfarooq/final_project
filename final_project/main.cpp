@@ -24,13 +24,13 @@ int main(void){
 	Ultrasound test2;
 	MR test3;
 
-/*
+
 	test1.showStatusContents();
 	test1.schedule_CT();
 	test1.showStatusContents();
 	test1.addAnnotationCT();
 	test1.openCT();
-*/
+
 
 	test2.showStatusContents();
 	test2.schedule_US();
@@ -38,14 +38,12 @@ int main(void){
 	test2.addAnnotationUS();
 	test2.openUS();
 
-/*
-	test3.showStatusContents();
-	test3.schedule_CT();
-	test3.showStatusContents();
-	test3.addAnnotationCT();
-	test3.openCT();
-*/
 
+	test3.showStatusContents();
+	test3.schedule_MR();
+	test3.showStatusContents();
+	test3.addAnnotationMR();
+	test3.openMR();
 
 	return 0;
 }
