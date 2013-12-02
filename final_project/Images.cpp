@@ -15,7 +15,8 @@ Images::Images(){
 	staff = "UNAVAILABLE";
 	patientLastname = "JOHN_DOE";
 	date = "UNAVAILABLE";
-
+	saved_type = ".jpg";
+	status = 0;
 }
 
 Images::Images(string doctor, string person, string calender){
@@ -23,7 +24,8 @@ Images::Images(string doctor, string person, string calender){
 	staff = doctor;
 	patientLastname = person;
 	date = calender;
-
+	saved_type = ".jpg";
+	status = 0;
 }
 
 void Images::setAdministrators(){

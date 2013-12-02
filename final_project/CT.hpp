@@ -3,6 +3,8 @@
  *
  *  Created on: Nov 25, 2013
  *      Author: Hamza
+ *
+ *      CT is saved as .jpg
  */
 
 #ifndef CT_HPP_

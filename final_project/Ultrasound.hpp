@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 26, 2013
  *      Author: Hamza
+ *      Ultrasound in .png
  */
 
 #ifndef ULTRASOUND_HPP_

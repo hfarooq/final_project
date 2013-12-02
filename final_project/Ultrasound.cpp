@@ -15,8 +15,7 @@ Ultrasound::Ultrasound(){
 	focusDepth = 3;
 	triggerTime = 2;
 	nominalInterval = 10;
-	saved_type = ".jpg";
-	status = 0;
+	saved_type = ".png";
 }
 
 void Ultrasound::showStatusContents(){

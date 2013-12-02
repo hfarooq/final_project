@@ -1,45 +1,8 @@
-11/26/13
-UNAVAILABLE: My
-11/26/13
-UNAVAILABLE: 
-15
-UNAVAILABLE: 
-12
-UNAVAILABLE: 
-406
-UNAVAILABLE: 
-407
-UNAVAILABLE: 
-407
-UNAVAILABLE: 
-410
-UNAVAILABLE: 411
-UNAVAILABLE: 411
-UNAVAILABLE: 412
-UNAVAILABLE: 
-789
-UNAVAILABLE: 
-414
-UNAVAILABLE: 
-415
-UNAVAILABLE: 
-456
-UNAVAILABLE: 
-452
-UNAVAILABLE: My
-501/2
-UNAVAILABLE: Why
-11/26/13
-UNAVAILABLE: 
-27/11/13
-UNAVAILABLE: This is my note
-26th
-UNAVAILABLE: The patient presented needs a follow up CTA
 
-Ultrasound note
-11/26/13
-UNAVAILABLE: This is testing the Ultrasound
+CT note
+03-12-2013
+: No abnormalities were found
 
-Ultrasound note
-11/27/13
-Reaper, Grimm: Testing ultrasound yet again
+CT note
+02/12/13
+Awesomer: The patient is stable

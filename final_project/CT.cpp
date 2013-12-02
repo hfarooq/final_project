@@ -17,7 +17,6 @@ CT::CT(){
 	xRayTubeCurrent = 10;
 	typeCT = "CT";
 	saved_type = ".jpg";
-	status = 0;
 }
 
 void CT::showStatusContents(){
@@ -75,14 +74,15 @@ void CT::addAnnotationCT(){
 	string new_note;
 	string person;
 
+	cout << "Please enter your name: ";
+	getline(cin, person);
+	getline(cin, person);
+
 	cout << "Please enter your note: ";
 	getline(cin, new_note);
 
-	cout << "Please enter your name: ";
-	getline(cin, person);
-
 	cout << "Please enter the current date: ";
-	cin >> curr_date;
+	getline(cin, curr_date);
 
 	storeAnnotation("\n");
 	storeAnnotation("CT note\n");

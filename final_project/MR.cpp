@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 26, 2013
  *      Author: Hamza
+ *      MR in .bmp
  */
 
 
@@ -14,8 +15,7 @@ MR::MR(){
 	magneticFieldStrength = 1.5;
 	spacingBetweenSlices = 4;
 	MRAcquisitionType = "2D";
-	saved_type = ".jpg";
-	status = 0;
+	saved_type = ".bmp";
 }
 
 void MR::showStatusContents(){

@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 25, 2013
  *      Author: Hamza
+ *      CT scans must be saved in .jpg, Ultrasound in .png, and MR in .bmp
  */
 
 #ifndef IMAGES_HPP_

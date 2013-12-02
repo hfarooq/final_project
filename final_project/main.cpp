@@ -3,6 +3,7 @@
  *
  *  Created on: Nov 12, 2013
  *      Author: Hamza
+ *      CT scans must be saved in .jpg, Ultrasound in .png, and MR in .bmp
  */
 
 
@@ -18,28 +19,31 @@
 using namespace std;
 
 int main(void){
+
+	CT test1;
+	Ultrasound test2;
+	MR test3;
+
 /*
-	const char *a = "formula-1-race";
-	const char *b = ".jpg";
-
-	char result[100];
-
-	strcpy(result, a);
-	strcat (result, b);
-
-	cout << result;
-
-	system(result);
+	test1.showStatusContents();
+	test1.schedule_CT();
+	test1.showStatusContents();
+	test1.addAnnotationCT();
+	test1.openCT();
 */
 
-	CT test;
-	cout << "Filename of image currently stored in system is \"formula-1-race\"" << endl;
-	test.openCT();
+	test2.showStatusContents();
+	test2.schedule_US();
+	test2.showStatusContents();
+	test2.addAnnotationUS();
+	test2.openUS();
 
 /*
-	test.showStatus();
-	test.schedule_CT();
-	test.showStatus();
+	test3.showStatusContents();
+	test3.schedule_CT();
+	test3.showStatusContents();
+	test3.addAnnotationCT();
+	test3.openCT();
 */
 
 
