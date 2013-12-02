@@ -61,14 +61,15 @@ void Ultrasound::addAnnotationUS(){
 	string new_note;
 	string person;
 
+	cout << "Please enter your name: ";
+	getline(cin, person);	//The code skips over this getline, so it must be repeated
+	getline(cin, person);
+
 	cout << "Please enter your note: ";
 	getline(cin, new_note);
 
-	cout << "Please enter your name: ";
-	getline(cin, person);
-
 	cout << "Please enter the current date: ";
-	cin >> curr_date;
+	getline(cin, curr_date);
 
 	storeAnnotation("\n");
 	storeAnnotation("Ultrasound note\n");

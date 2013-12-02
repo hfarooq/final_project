@@ -75,7 +75,7 @@ void CT::addAnnotationCT(){
 	string person;
 
 	cout << "Please enter your name: ";
-	getline(cin, person);
+	getline(cin, person);	//The code skips over this getline, so it must be repeated
 	getline(cin, person);
 
 	cout << "Please enter your note: ";

@@ -6,3 +6,7 @@ CT note
 CT note
 02/12/13
 Awesomer: The patient is stable
+
+Ultrasound note
+03/12/13
+Cooler: The patient`s scan seems okay
