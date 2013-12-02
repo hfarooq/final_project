@@ -72,7 +72,9 @@ void Ultrasound::addAnnotationUS(){
 	getline(cin, curr_date);
 
 	storeAnnotation("\n");
-	storeAnnotation("Ultrasound note\n");
+	storeAnnotation("Ultrasound note for ");
+	storeAnnotation(patientLastname);
+	storeAnnotation("\n");
 	storeAnnotation(curr_date);
 	storeAnnotation("\n");
 	storeAnnotation(person);
@@ -82,18 +84,22 @@ void Ultrasound::addAnnotationUS(){
 }
 
 void Ultrasound::openUS(){
-	char opening[100];
-	char filename[75];
+	string opening;
+	string filename;
+	string program;
 
-	cout << "Please enter filename of the image you wish to view (if using Linux, enter gnome- before file name): " << endl;
-	cin >> filename;
+	cout << "Please enter the filename of the image you wish to view: " << endl;
+	getline(cin, filename);
 
-	strcpy(opening, filename);
-	strcat(opening, saved_type);
+	cout << "Enter the kind of image viewer you wish to use: " << endl;
+	getline(cin, program);
 
-	system(opening);
+	opening = program + " " + filename;
+
+	system(opening.c_str());
 }
 
+//Only works on windows
 void Ultrasound::openUS(char *filename){
 	char opening[100];
 

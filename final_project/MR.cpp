@@ -77,7 +77,9 @@ void MR::addAnnotationMR(){
 	getline(cin, curr_date);
 
 	storeAnnotation("\n");
-	storeAnnotation("Magnetic Resonance note\n");
+	storeAnnotation("Magnetic Resonance note for ");
+	storeAnnotation(patientLastname);
+	storeAnnotation("\n");
 	storeAnnotation(curr_date);
 	storeAnnotation("\n");
 	storeAnnotation(person);
@@ -87,18 +89,22 @@ void MR::addAnnotationMR(){
 }
 
 void MR::openMR(){
-	char opening[100];
-	char filename[75];
+	string opening;
+	string filename;
+	string program;
 
-	cout << "Please enter filename of the image you wish to view (if using Linux, enter gnome- before file name): " << endl;
-	cin >> filename;
+	cout << "Please enter the filename of the image you wish to view: " << endl;
+	getline(cin, filename);
 
-	strcpy(opening, filename);
-	strcat(opening, saved_type);
+	cout << "Enter the kind of image viewer you wish to use: " << endl;
+	getline(cin, program);
 
-	system(opening);
+	opening = program + " " + filename;
+
+	system(opening.c_str());
 }
 
+//Only works on windows
 void MR::openMR(char *filename){
 	char opening[100];
 

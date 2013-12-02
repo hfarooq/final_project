@@ -85,7 +85,9 @@ void CT::addAnnotationCT(){
 	getline(cin, curr_date);
 
 	storeAnnotation("\n");
-	storeAnnotation("CT note\n");
+	storeAnnotation("CT note for ");
+	storeAnnotation(patientLastname);
+	storeAnnotation("\n");
 	storeAnnotation(curr_date);
 	storeAnnotation("\n");
 	storeAnnotation(person);
@@ -95,18 +97,23 @@ void CT::addAnnotationCT(){
 }
 
 void CT::openCT(){
-	char opening[100];
-	char filename[75];
 
-	cout << "Please enter filename of the image you wish to view (if using Linux, enter gnome- before file name): " << endl;
-	cin >> filename;
+	string opening;
+	string filename;
+	string program;
 
-	strcpy(opening, filename);
-	strcat(opening, saved_type);
+	cout << "Please enter the filename of the image you wish to view: " << endl;
+	getline(cin, filename);
 
-	system(opening);
+	cout << "Enter the kind of image viewer you wish to use: " << endl;
+	getline(cin, program);
+
+	opening = program + " " + filename;
+
+	system(opening.c_str());
 }
 
+//Only works on windows
 void CT::openCT(char *filename){
 	char opening[100];
 

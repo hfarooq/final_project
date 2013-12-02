@@ -34,7 +34,7 @@ public:
 	void schedule_CT();
 	void addAnnotationCT();
 	void openCT();
-	void openCT(char *filename);
+	void openCT(char *filename);		//Only works on windows
 };
 
 

@@ -1,16 +1,12 @@
 
-CT note
-03-12-2013
-: No abnormalities were found
+CT note for Doe
+2013/12/03
+Awesomer: The patient's scan appears to be normal
 
-CT note
-02/12/13
-Awesomer: The patient is stable
+Ultrasound note for Doer
+2014/06/22
+Cooler: The Ultrasound did not show abnormalities
 
-Ultrasound note
-03/12/13
-Cooler: The patient`s scan seems okay
-
-Magnetic Resonance note
-05/01/14
-Greater: The MR scan is scheduled and a followup may be required
+Magnetic Resonance note for Doeoy
+08/23/2014
+Greater: The patient needs a followup CT to ensure that cancer has disappeared

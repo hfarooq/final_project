@@ -31,7 +31,7 @@ public:
 	void schedule_US();
 	void addAnnotationUS();
 	void openUS();
-	void openUS(char *filename);
+	void openUS(char *filename);		//Only works on windows
 };
 
 

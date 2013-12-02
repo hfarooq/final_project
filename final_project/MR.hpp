@@ -30,7 +30,7 @@ public:
 	void schedule_MR();
 	void addAnnotationMR();
 	void openMR();
-	void openMR(char *filename);
+	void openMR(char *filename);		//Only works on windows
 };
 
 
