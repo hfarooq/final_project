@@ -90,7 +90,7 @@ void MR::openMR(){
 	char opening[100];
 	char filename[75];
 
-	cout << "Please enter filename of the image you wish to view: " << endl;
+	cout << "Please enter filename of the image you wish to view (if using Linux, enter gnome- before file name): " << endl;
 	cin >> filename;
 
 	strcpy(opening, filename);
